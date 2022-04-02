@@ -1,10 +1,6 @@
-from math import e
-from this import d
 from requests import Request, Session
-from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 from datetime import datetime, timedelta
-from warnings import warn
 import pandas as pd
 
 if __name__ == '__main__':
@@ -198,8 +194,8 @@ if __name__ == '__main__':
     end_date = datetime.today()
 
     for symbol in query_crypto:
-        #df_bar = get_olhc(symbol, 14)
-        df_bar = get_price(symbol, start_date, end_date)
+        df_bar = get_olhc(symbol, 14)
+        #df_bar = get_price(symbol, start_date, end_date)
         print(df_bar)
         # download and save it to other place
         #df_bar.to_csv('%s_%s.csv' % (symbol, datetime.today().strftime("%Y-%m-%d")))
