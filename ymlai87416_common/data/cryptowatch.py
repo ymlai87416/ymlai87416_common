@@ -14,6 +14,8 @@ import os
 # Crytowatch
 # Also a data provider, but seems a lot to catch up
 
+#crypto watch have a much difficult api, and I have to specify the market, which just I don't know
+
 def __read_secret(data):
     cryptowatch_public_key = data['cryptowatch_public_key']
     return cryptowatch_public_key

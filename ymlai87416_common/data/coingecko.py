@@ -115,7 +115,7 @@ def get_olhc(symbol: str, days: int):
 
 def get_price(symbol: str, date_from: datetime, date_to: datetime):
     '''
-    Get price of a crypto currency within a time range
+    Get price of a crypto currency within a time range, but there is only price. not suitable for backtest?
 
     Parameters
     ----------
