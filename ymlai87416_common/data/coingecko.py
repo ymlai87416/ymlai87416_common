@@ -17,27 +17,6 @@ import os
 # No API key is required for coin gecko
 # Seems the best data source I can have, but the API is a little bit limited
 
-# TODO: Should be obsolete and provide from outside
-def __symbol_to_id(symbol: str):
-    gecko_id = {
-        'eth': 'ethereum',
-        'bnb': 'binancecoin',
-        'ceek': 'ceek', 
-        'bit': 'bitdao',
-        'usdt': 'tether',
-        'busd': 'binance-usd',
-        'kasta': 'kasta',
-        'thc': 'thetan-coin',
-        'pi': '???',
-        'sol': 'solana',
-        'aca': 'acala',
-        'matic': 'matic-network',
-        'bdot': 'binance-wrapped-dot',
-        'weth-polygon': 'ethereum',
-    }
-
-    return gecko_id.get(symbol.lower())
-
 
 def get_all_symbol():
     url = 'https://api.coingecko.com/api/v3/coins/list'
@@ -94,7 +73,7 @@ def get_olhc(symbol: str, days: int):
         olhc in whatever time range specified by coin gecko
     '''
 
-    url = 'https://api.coingecko.com/api/v3/coins/%s/ohlc' % __symbol_to_id(symbol)
+    url = 'https://api.coingecko.com/api/v3/coins/%s/ohlc' % (symbol)
 
     headers = {
         'Accepts': 'application/json',

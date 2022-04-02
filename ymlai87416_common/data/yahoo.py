@@ -89,6 +89,6 @@ def get_info_hk(ticker: str):
 if __name__ == '__main__':
     
     #msft = yf.Ticker("0005.HK")
-    data = pdr.get_data_yahoo("BRK-B", start='2022-1-1', end='2022-3-30')
+    data = pdr.get_data_yahoo("SCO", start='2022-1-1', end='2022-3-30')
     # get stock info
     print(data)
