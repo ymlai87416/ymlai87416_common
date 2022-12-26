@@ -1,5 +1,5 @@
 """Access to account statement webservice."""
-""" """
+"""Code adopt from https://github.com/erdewit/ib_insync/blob/master/ib_insync/flexreport.py"""
 
 import logging
 import time
@@ -7,7 +7,7 @@ import xml.etree.ElementTree as et
 from contextlib import suppress
 from urllib.request import urlopen
 
-_logger = logging.getLogger('ib_insync.flexreport')
+_logger = logging.getLogger('ymlai87416.ib_flex_report')
 
 
 class FlexError(Exception):
